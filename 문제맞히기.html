@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML 예제 및 정답 확인</title>
+<style>
+  .example {
+    display: none;
+  }
+  .visible {
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<h2>HTML 예제</h2>
+
+<!-- 예제 목록 -->
+<ul id="example-list">
+  <li><a href="#" onclick="showExample(1); return false;">예제 1</a></li>
+  <li><a href="#" onclick="showExample(2); return false;">예제 2</a></li>
+  <li><a href="#" onclick="showExample(3); return false;">예제 3</a></li>
+  <li><a href="#" onclick="showExample(4); return false;">예제 4</a></li>
+  <li><a href="#" onclick="showExample(5); return false;">예제 5</a></li>
+  <li><a href="#" onclick="showExample(6); return false;">예제 6</a></li>
+  <li><a href="#" onclick="showExample(7); return false;">예제 7</a></li>
+  <li><a href="#" onclick="showExample(8); return false;">예제 8</a></li>
+  <li><a href="#" onclick="showExample(9); return false;">예제 9</a></li>
+  <li><a href="#" onclick="showExample(10); return false;">예제 10</a></li>
+  <li><a href="#" onclick="showExample(11); return false;">예제 11</a></li>
+  <li><a href="#" onclick="showExample(12); return false;">예제 12</a></li>
+  <!-- 추가 예제를 필요에 따라 계속해서 나열 -->
+</ul>
+
+<!-- 예제들 -->
+<div class="example" id="example-1">
+  <h3>예제 1: HTML 개념</h3>
+  <p>HTML은 프로그래밍 언어가 아닌 어떤 언어일까요?</p>
+  <input type="text" id="answer-1">
+  <button onclick="checkAnswer(1)">정답 확인</button>
+  <p id="result-1"></p>
+</div>
+
+<div class="example" id="example-2">
+  <h3>예제 2: HTML 개념</h3>
+  <p>HTML은 웹 페이지의 어떤 것을 설명하나요?</p>
+  <input type="text" id="answer-2">
+  <button onclick="checkAnswer(2)">정답 확인</button>
+  <p id="result-2"></p>
+</div>
+
+<div class="example" id="example-3">
+    <h3>예제 3: 기본 규칙</h3>
+    <p>아래의 코드에서 빈칸에 알맞은 단어를 써주세요.<br>
+    &lt;<u>&emsp;&nbsp;</u>><br>&nbsp;&lt;body><br>&nbsp;&nbsp;&lt;p>안녕하세요.&lt;/p><br>&nbsp;&lt;/body><br>
+        &lt;/<u>&emsp;&nbsp;</u>>출력 결과 : 안녕하세요.</p>
+    <input type="text" id="answer-3">
+    <button onclick="checkAnswer(3)">정답 확인</button>
+    <p id="result-3"></p>
+  </div>
+
+  <div class="example" id="example-4">
+    <h3>예제 4: HTML 요소</h3>
+    <p>HTML의 요소는 "<u>&nbsp;&nbsp;&nbsp;</u>"태그부터 끝 태그까지의 모든 것을 말합니다.</p>
+    <input type="text" id="answer-4">
+    <button onclick="checkAnswer(4)">정답 확인</button>
+    <p id="result-4"></p>
+  </div>
+
+  <div class="example" id="example-5">
+    <h3>예제 5: HTML 속성</h3>
+    <p>HTML &lt;a> 태그에서 페이지의 url을 저장하는 속성은 무엇인가요?</p>
+    <input type="text" id="answer-5">
+    <button onclick="checkAnswer(5)">정답 확인</button>
+    <p id="result-5"></p>
+  </div>
+
+  <div class="example" id="example-6">
+    <h3>예제 6: HTML 제목</h3>
+    <p>HTML 제목 중 세 번째로 작은 제목은 어떤 태그일까요?</p>
+    <input type="text" id="answer-6">
+    <button onclick="checkAnswer(6)">정답 확인</button>
+    <p id="result-6"></p>
+  </div>
+
+  <div class="example" id="example-7">
+    <h3>예제 7: HTML 문단</h3>
+    <p>다음 코드의 작동 결과를 쓰세요.<br>&lt;!DOCTYPE html><br>&nbsp;&lt;html><br>&nbsp;&nbsp;&lt;body><br>&nbsp;&nbsp;&nbsp;&ltp>안녕<br>하 &nbsp;세 &nbsp;&nbsp;&nbsp;&nbsp;요.<br>&nbsp;&nbsp;&lt;/body><br>&nbsp;&lt;/html></p>
+    <input type="text" id="answer-7">
+    <button onclick="checkAnswer(7)">정답 확인</button>
+    <p id="result-7"></p>
+  </div>
+
+  <div class="example" id="example-8">
+    <h3>예제 8: HTML 스타일</h3>
+    <p>HTML 선언과 <html>, <body> 태그를 제외하고 "보라색"이라는 단어를 노란색으로 설정하는 코드를 쓰세요.</p>
+    <input type="text" id="answer-8">
+    <button onclick="checkAnswer(8)">정답 확인</button>
+    <p id="result-8"></p>
+  </div>
+
+  <div class="example" id="example-9">
+    <h3>예제 9: HTML 서식</h3>
+    <p>예제 8번과 동일하게 제외하고 각각 "1번", "2번", "3번"이라는 단어를 굵게, 표시되게, 삭제되게 만드는 코드를 쓰세요. 띄어쓰기를 넣어주세요.</p>
+    <input type="text" id="answer-9">
+    <button onclick="checkAnswer(9)">정답 확인</button>
+    <p id="result-9"></p>
+  </div>
+
+  <div class="example" id="example-10">
+    <h3>예제 10: HTML 주석</h3>
+    <p>주석을 작성하기 위해 사용하는 시작 태그를 쓰세요.</p>
+    <input type="text" id="answer-10">
+    <button onclick="checkAnswer(10)">정답 확인</button>
+    <p id="result-10"></p>
+  </div>
+
+  <div class="example" id="example-11">
+    <h3>예제 11: HTML 이미지</h3>
+    <p>HTML에서 이미지를 링크할 때 필요한 속성 두 가지를 쓰세요. 띄어쓰기를 넣어주세요.</p>
+    <input type="text" id="answer-11">
+    <button onclick="checkAnswer(11)">정답 확인</button>
+    <p id="result-11"></p>
+  </div>
+
+  <div class="example" id="example-12">
+    <h3>예제 12: HTML 테이블</h3>
+    <p><table><tr><th>빵 종류</th><th>가격</th><th>팔린 양</th></tr><tr><td>초코소라빵</td><td>3000원</td><td>20개</td></tr><tr><td>피자빵</td><td>2000원</td><td>47개</td></tr><tr><td>소보로빵</td><td>3500원</td><td>24개</td></tr></table><br>
+    위 테이블을 만들 때 코드에 작성된 &lt;td> 시작 태그의 개수를 쓰세요.</p>
+    <input type="text" id="answer-12">
+    <button onclick="checkAnswer(12)">정답 확인</button>
+    <p id="result-12"></p>
+  </div>
+<!-- 추가 예제들을 필요에 따라 계속해서 나열 -->
+
+<!-- 이전/다음 버튼 -->
+<button onclick="prevExample()">이전</button>
+<button onclick="nextExample()">다음</button>
+
+<script>
+let currentExample = 1;
+const totalExamples = 12; // 전체 예제 수
+
+function showExample(exampleNum) {
+  // 모든 예제 숨기기
+  for (let i = 1; i <= totalExamples; i++) {
+    document.getElementById(`example-${i}`).classList.remove('visible');
+    document.getElementById(`example-${i}`).classList.add('example');
+  }
+  // 선택한 예제 보이기
+  document.getElementById(`example-${exampleNum}`).classList.remove('example');
+  document.getElementById(`example-${exampleNum}`).classList.add('visible');
+  currentExample = exampleNum;
+}
+
+function prevExample() {
+  if (currentExample > 1) {
+    showExample(currentExample - 1);
+  }
+}
+
+function nextExample() {
+  if (currentExample < totalExamples) {
+    showExample(currentExample + 1);
+  }
+}
+
+function checkAnswer(exampleNum) {
+  const answer = document.getElementById(`answer-${exampleNum}`).value.toLowerCase().trim();
+  let resultElement = document.getElementById(`result-${exampleNum}`);
+  if (exampleNum === 1 && answer === '마크업') {
+    resultElement.textContent = '정답입니다.';
+  } else if (exampleNum === 2 && answer === '구조') {
+    resultElement.textContent = '정답입니다.';
+  } else if (exampleNum === 2 && answer === 'html') {
+    resultElement.textContent = '정답입니다.';
+  } else if (exampleNum === 2 && answer === '시작') {
+    resultElement.textContent = '정답입니다.';
+  } else if (exampleNum === 2 && answer === 'href') {
+    resultElement.textContent = '정답입니다.';
+  } else if (exampleNum === 2 && answer === 'h4') {
+    resultElement.textContent = '정답입니다.';
+  } else if (exampleNum === 2 && answer === '안녕하세요.') {
+    resultElement.textContent = '정답입니다.';
+  } else if (exampleNum === 2 && answer === '<p style="color:purple">보라색</p>') {
+    resultElement.textContent = '정답입니다.';
+  } else if (exampleNum === 2 && answer === '<b>1번</b> <mark>2번</mark> <del>3번</del>') {
+    resultElement.textContent = '정답입니다.';
+  } else if (exampleNum === 2 && answer === '<!--') {
+    resultElement.textContent = '정답입니다.';
+  } else if (exampleNum === 2 && answer === 'img src') {
+    resultElement.textContent = '정답입니다.';
+  } else if (exampleNum === 2 && answer === '9') {
+    resultElement.textContent = '정답입니다.';
+  }
+    else if (exampleNum === 2 && answer === '9개') {
+    resultElement.textContent = '정답입니다.';
+  }
+   else {
+    resultElement.textContent = '틀렸습니다.';
+  }
+  // 다음 문제 버튼 보이기
+  resultElement.innerHTML += '<br><button onclick="nextExample()">다음 문제</button>';
+}
+</script>
+
+</body>
+</html>
